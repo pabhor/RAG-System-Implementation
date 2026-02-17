@@ -1,8 +1,10 @@
 # Retrieval-Augmented Generation (RAG)
 
-## This repository documents my end-to-end learning and implementation journey of Retrieval-Augmented Generation (RAG) systems — starting from foundational ingestion pipelines to advanced hybrid retrieval, ranking, and multi-query optimization techniques.
+This repository documents my end-to-end learning and implementation journey of Retrieval-Augmented Generation (RAG) systems — starting from foundational ingestion pipelines to advanced hybrid retrieval, ranking, and multi-query optimization techniques.
 
-## The goal: build production-style RAG architectures with modular components and measurable improvements in retrieval quality.
+**Goal:** Build production-style RAG architectures with modular components and measurable improvements in retrieval quality.
+
+---
 
 ## What I Learned & Implemented
 
@@ -14,51 +16,57 @@
 - One-off retrieval with LLM-based answer generation
 
 #### Files
-
 - ingestion_pipeline.py
-
 - retrieval_pipeline.py
-
 - answer_generation.py
+
+---
 
 ### 2. Text Chunking Strategies
 
-- Improving retrieval quality starts with smarter chunking.
 - Recursive Character Text Splitting
 - Semantic Chunking
 - Agentic Chunking strategies
 - Chunk size & overlap experimentation
 
-###3. Vector Search & Embeddings
+---
+
+### 3. Vector Search & Embeddings
 
 - Generating dense embeddings
 - Storing vectors in a vector database
 - Similarity search (cosine similarity / dot product)
 - Understanding recall vs precision trade-offs
 
+---
+
 ### 4. Retrieval Techniques
 
-- Explored multiple retrieval strategies:
 - Basic similarity retrieval
 - Metadata filtering
 - Multi-query retrieval
 - History-aware retrieval
 - Retrieval method comparison
 
-####Files
+#### Files
 - retrieval_methods.py
 - multi_query_retrieval.py
 - history_aware_generation.py
 
+---
+
 ### 5. Advanced Retrieval Optimization
 
-- Implement hybrid search by combining dense vector retrieval with sparse keyword-based methods to improve semantic and lexical matching.
-- Design multi-query retrieval strategies to enhance recall through query reformulation and expansion.
-- Apply cross-encoder reranking to refine top-k results and improve precision before generation.
-- Integrate Reciprocal Rank Fusion (RRF) to aggregate outputs from multiple retrievers for more stable and robust ranking.
-- Extend the RAG pipeline to support multimodal retrieval, enabling structured and unstructured data integration.
+- Hybrid search (dense + sparse retrieval)
+- Multi-query query reformulation
+- Cross-encoder reranking
+- Reciprocal Rank Fusion (RRF)
+- Multimodal retrieval integration
+
+---
 
 ### 6. Next Steps
+
 - Add evaluation metrics (Recall@K, MRR, NDCG)
 - Deploy as API service
 - Add monitoring & observability
